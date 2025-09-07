@@ -35,6 +35,10 @@ app.use('/api/contact', contactRoutes)
 app.use('/api/blog', blogRoutes) 
 app.use('/api/settings', settingRoutes)
 
+import settingsRoutes from "./routes/settings.js";
+
+app.use("/api/settings", settingsRoutes);
+
 const PORT = process.env.PORT || 5000
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
