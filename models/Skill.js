@@ -1,8 +1,7 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
 const skillSchema = new mongoose.Schema({
-  name: String,
-  level: String
-})
+  name: { type: String, required: true }
+});
 
-export default mongoose.model('Skill', skillSchema)
+export default mongoose.model("Skill", skillSchema);
